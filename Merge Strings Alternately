@@ -14,7 +14,7 @@ check_word_length(word2)
 print(word1)
 print(word2)
 
-#this is a list comprehension
+# This is a list comprehension
 letters1 = [letter for letter in word1] 
 print(letters1)
 letters2 = [letter for letter in word2]
