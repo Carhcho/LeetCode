@@ -1,35 +1,36 @@
-def check_word_length(word):
-    if len(word) < 1 or len(word) > 100:
-        raise ValueError("Word length must be between 1 and 100 characters.")
+class Solution(object):
+    def check_word_length(word):
+        if len(word) < 1 or len(word) > 100:
+            raise ValueError("Word length must be between 1 and 100 characters.")
 
-word1 = "abcd"
-word2 = "yu"
+    word1 = "abcd"
+    word2 = "yu"
 
-# Check the length of word1
-check_word_length(word1)
+    # Check the length of word1
+    check_word_length(word1)
 
-# Check the length of word2
-check_word_length(word2)
+    # Check the length of word2
+    check_word_length(word2)
 
-print(word1)
-print(word2)
+    print(word1)
+    print(word2)
 
-# This is a list comprehension
-letters1 = [letter for letter in word1] 
-print(letters1)
-letters2 = [letter for letter in word2]
-print(letters2)
-word3 = ""
+    # This is a list comprehension
+    letters1 = [letter for letter in word1] 
+    print(letters1)
+    letters2 = [letter for letter in word2]
+    print(letters2)
+    word3 = ""
 
-# Determine the length of the longer list
-max_length = max(len(letters1), len(letters2))
+    # Determine the length of the longer list
+    max_length = max(len(letters1), len(letters2))
 
-# Combine letters from letters1 and letters2 alternately
-for i in range(max_length):
-    if i < len(letters1):
-        word3 += letters1[i]
-    if i < len(letters2):
-        word3 += letters2[i]
+    # Combine letters from letters1 and letters2 alternately
+    for i in range(max_length):
+        if i < len(letters1):
+            word3 += letters1[i]
+        if i < len(letters2):
+            word3 += letters2[i]
 
-# Print the combined word3
-print(word3)
+    # Print the combined word3
+    print(word3)
